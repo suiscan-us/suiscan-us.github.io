@@ -1,0 +1,147 @@
+{
+  "settings": {
+    "name": "suiscan-us",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "startm5",
+      "title": "StartM5",
+      "titlePreset": "StartM5",
+      "styling": {
+        "primaryColor": "#9fe870",
+        "secondaryColor": "#ffd7ef",
+        "successColor": "#3a341c",
+        "infoColor": "#320707",
+        "warningColor": "#a0e2e1",
+        "dangerColor": "#ffea64",
+        "mainFont": "Inter Tight",
+        "display1Font": "Inter Tight",
+        "display1Size": 5,
+        "display2Font": "Inter Tight",
+        "display2Size": 4,
+        "display5Font": "Inter Tight",
+        "display5Size": 2,
+        "display7Font": "Inter Tight",
+        "display7Size": 1.4,
+        "display4Font": "Inter Tight",
+        "display4Size": 1.4,
+        "isRoundedImages": true,
+        "isRoundedButtons": true,
+        "isLargeButtons": true,
+        "isGhostButtonBorder": true,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      }
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "6.1.12",
+    "siteFonts": [],
+    "favicon": "@PROJECT_PATH@/assets/images/suiscan-favicorn.png",
+    "robotsSwitcher": true,
+    "robotsText": "User-agent: *\nDisallow: /cgi-bin\nSitemap: https://suiscan-us.github.io/sitemap.xml/",
+    "sitemapSwitcher": true,
+    "siteUrl": "https://suiscan-us.github.io/",
+    "sitemapSwitcherAuto": "on",
+    "mbrsiteDomain": "enkjmxnibf",
+    "imageResize": false,
+    "usedWebp": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "uniqCompNum": 2,
+    "versionPublish": "6.1.12"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Sui Explorer - SuiScan Blockchain",
+        "meta_descr": "SuiScan is a powerful blockchain explorer for the Sui network, offering real-time transaction tracking, wallet insights, smart contract analysis, validator data, and token analytics.",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@bgColor",
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "img": {
+              "object-fit": "contain",
+              "border-radius": "0 !important"
+            }
+          },
+          "_name": "image04",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"image03\" group=\"Image & Video\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" value=\"0\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" value=\"0\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Caption\" name=\"showText\">\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\">\n    </mbr-parameters>\n\n    <div class=\"image-block m-auto\">\n        <a href=\"https://suiscan.xyz/\"><img src=\"@PROJECT_PATH@/assets/images/suiscan.png\" alt=\"suiscan\"></a>\n        <div mbr-if=\"showText\">\n            <p class=\"mbr-text mt-4 pb-4 align-center mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                Unlock your true path!\n            </p>\n        </div>\n    </div>\n</section>",
+          "_cid": "vb0n7MKvwr",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "image04-0"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".card-wrapper": {
+              "background": "@wrapBgColor",
+              "@media (max-width: 767px)": {
+                "padding": "2rem 1.5rem"
+              },
+              "@media (min-width: 768px) and (max-width: 991px)": {
+                "padding": "2.25rem"
+              },
+              "@media (min-width: 992px)": {
+                "padding": "4rem"
+              }
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#000000",
+              "text-align": "left"
+            },
+            ".card-title, .card-box": {
+              "text-align": "left",
+              "color": "#000000"
+            }
+          },
+          "_name": "article07",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article07\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Content Width\" name=\"contentWidth\" min=\"8\" max=\"12\" step=\"1\" value=\"10\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n    <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#ffffff\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n      <input type=\"color\" title=\"Color\" value=\"#edefeb\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"card col-md-12 col-lg-{{contentWidth}}\">\n        <div class=\"card-wrapper\">\n          <h3 class=\"card-title mbr-fonts-style mbr-white mt-3 mb-4\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-box\">\n            <b>Sui Explorer - <a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>Blockchain</b></h3>\n          <div class=\"row card-box align-left\">\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b><a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan</a>: A Comprehensive Blockchain Explorer for the Sui Ecosystem</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><p><a href=\"https://suiscan.xyz/\" class=\"text-primary\"></a>As blockchain technology continues to evolve, the demand for transparent, efficient, and user-friendly tools has grown alongside it. Explorers play a crucial role in this ecosystem, serving as gateways that allow users to inspect transactions, analyze network activity, and verify on-chain data. In the Sui blockchain ecosystem, <a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>has emerged as a powerful and comprehensive blockchain explorer designed to meet these needs. By offering real-time insights, advanced analytics, and developer-friendly features, <a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>contributes significantly to the transparency and accessibility of the Sui network.<br><br><b>Understanding the Sui Blockchain<br></b><br>Before diving into <a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan</a>, it is important to understand the context in which it operates. Sui is a Layer 1 blockchain built to provide high throughput, low latency, and scalable decentralized applications (<b>dApps</b>). Developed using the Move programming language, Sui introduces an object-centric data model that enables parallel transaction execution. This architectural innovation allows Sui to process transactions more efficiently than many traditional blockchains.<br><br>Given this technical sophistication, a blockchain explorer tailored specifically to Sui’s architecture is essential. <a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>fulfills this role by offering users a clear and detailed window into the network’s operations.<br><br><b>What Is <a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>?<br></b><br><a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>is a blockchain explorer and analytics platform built for the Sui network. Much like how Etherscan serves Ethereum or Solscan serves Solana, SuiScan provides tools to search, verify, and analyze transactions, wallet addresses, smart contracts, validators, and other on-chain data specific to Sui.<br><br>At its core, SuiScan enhances transparency. Every transaction executed on Sui is recorded permanently on the blockchain. SuiScan makes this information accessible in a structured and user-friendly interface, enabling anyone—from casual users to developers—to explore network activity.<br><br><b>Key Features of <a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan</a><br>1. Transaction Tracking :-</b><br>One of the primary functions of <a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>is transaction tracking. Users can input a transaction hash to view detailed information such as:<br><br>. Sender and recipient addresses<br>. Transaction status (success or failure)<br>. Gas fees paid<br>. Timestamp<br>. Object changes and event logs<br><br>This functionality is critical for users who want to verify payments, monitor transfers, or debug contract interactions.<br><br><b>2. Address and Wallet Insights :-<br></b>SuiScan allows users to search for wallet addresses and review their activity. For any given address, users can see:<br><br>. Token balances<br>. NFTs held<br>. Transaction history<br>. Interaction with smart contracts<br><br>This feature is especially valuable for investors, traders, and developers who need to track wallet activity or audit fund movements.<br><br><b>3. Smart Contract and Object Exploration :-</b><br>Because Sui uses an object-centric model rather than a traditional account-based model, SuiScan provides tools to inspect objects directly. Users can explore smart contract modules, view code references, and examine the state of specific on-chain objects.<br><br>Developers benefit greatly from this feature, as it allows them to monitor contract deployments, verify interactions, and troubleshoot issues.<br><br><b>4. Validator and Network Statistics :-</b><br><a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>also offers insights into network validators and staking. Users can review validator performance metrics such as:<br><br>. Stake amount<br>. Commission rates<br>. Uptime<br>. Voting power<br><br>These metrics promote decentralization by enabling delegators to make informed decisions when choosing validators.<br><br>In addition, <a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>provides network-wide statistics, including total transactions, active addresses, and other ecosystem indicators. These metrics help analysts and investors gauge the health and growth of the network.<br><br><b>5. Token and NFT Tracking :-<br></b>As decentralized finance (<b>DeFi</b>) and non-fungible tokens (<b>NFTs</b>) expand within the Sui ecosystem, <a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>supports tracking of fungible tokens and NFTs. Users can explore token details such as supply, transfer history, and distribution.<br><br>For NFTs, <a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>allows users to view metadata, ownership records, and transaction history. This is particularly important in a blockchain that emphasizes digital asset ownership and dynamic NFTs.<br><br><b>Importance of Blockchain Explorers<br></b>Blockchain explorers like <a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>are foundational to decentralized systems. Without them, blockchain data would remain technically accessible but practically unusable for most users. Explorers transform raw blockchain data into readable, searchable, and understandable information.<br><br>Transparency builds trust. In decentralized networks where there is no central authority, verification becomes the responsibility of the participants. <a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>empowers users to independently verify transactions, confirm smart contract behavior, and monitor asset movements.<br><br>For developers, explorers serve as debugging tools. For investors, they provide due diligence capabilities. For researchers, they offer valuable datasets. In this way, <a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>supports the entire spectrum of blockchain participants.<br><br><b>User Experience and Interface</b><br>A key strength of <a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>is its intuitive interface. Blockchain data can be complex and intimidating, especially for newcomers. <a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>presents information in a structured and visually organized format, making it easier to navigate.<br><br>Search functionality is streamlined, allowing users to quickly find transactions, addresses, tokens, or validators. Tables and dashboards provide summarized data, while detailed views offer deeper insights.<br><br>The platform balances accessibility and depth, catering to both beginners and advanced users.<br><br><b>Security and Reliability</b><br>In blockchain ecosystems, reliability is critical. Users depend on explorers to provide accurate, real-time data. <a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>is designed to index blockchain data efficiently, ensuring up-to-date information.<br><br>While <a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>does not control or alter blockchain data, it plays a vital role in presenting accurate records. Its reliability strengthens user confidence in the Sui network.<br><br>Moreover, explorers indirectly enhance security by enabling public oversight. Suspicious transactions, unusual token movements, or validator irregularities can be identified through transparent data access.<br><br><b>Supporting Ecosystem Growth<br></b>As the Sui ecosystem grows, tools like <a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>become increasingly important. New decentralized applications, <b>DeFi platforms</b>, <b>NFT marketplaces</b>, and gaming projects rely on transparent on-chain visibility.<br><br>. <a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>acts as infrastructure that supports:<br>. Developer adoption<br>. Investor research<br>. Community engagement<br>. Institutional analysis<br><br>By providing analytics and insights, SuiScan contributes to informed participation and strategic decision-making within the ecosystem.<br><br><b>Comparison to Other Explorers</b><br>While many blockchain explorers share similar core functions, <a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>stands out due to its alignment with Sui’s object-based architecture. Traditional explorers designed for account-based blockchains would not fully capture Sui’s unique data model.<br><br><a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>specialized features ensure accurate representation of objects, dynamic assets, and parallel transaction execution. This tailored approach enhances usability and precision.<br><br><b>Future Potential</b><br>As blockchain adoption accelerates, explorers are likely to evolve beyond simple data lookup tools. Advanced analytics, API integrations, developer dashboards, and cross-chain insights may become standard.<br><br><a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>has the potential to expand into areas such as:<br>. Advanced <b>DeFi analytics</b><br>. On-chain governance tracking<br>. Historical data visualization<br>. Institutional reporting tools<br>. API services for developers<br><br>By continuing to innovate, SuiScan can remain a cornerstone of the Sui ecosystem.<br><br><b>Conclusion</b><br><a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>is more than just a blockchain explorer; it is a critical infrastructure component of the Sui network. By providing transparent access to transactions, wallet activity, smart contracts, validators, and token data, <a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>empowers users to interact confidently with the blockchain.<br><br>In decentralized systems, transparency is not optional—it is essential. <a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>bridges the gap between complex blockchain data and user-friendly insights, supporting developers, investors, researchers, and everyday users alike.<br><br>As Sui continues to expand its ecosystem and technological capabilities, <a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>will remain a vital tool that enhances visibility, trust, and engagement. In the broader landscape of blockchain innovation, explorers like <a href=\"https://suiscan.xyz/\" class=\"text-primary\">SuiScan </a>play a foundational role in turning decentralized technology into accessible and practical solutions for the world.</p></p>\n              </div>\n            </div>\n            \n            \n            \n          </div>\n          <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n            <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Start Now</a>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "vb0n8TMPry",
+          "_anchor": "article07-1",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
